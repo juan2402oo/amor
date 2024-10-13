@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, mi amor</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            animation: colorChange 10s infinite alternate;
+        }
+
+        /* Animación de cambio de color en el fondo */
+        @keyframes colorChange {
+            0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+            50% { background: linear-gradient(135deg, #ffecd2, #fcb69f); }
+            100% { background: linear-gradient(135deg, #fad0c4, #ff9a9e); }
+        }
+
+        /* Estilo del encabezado principal */
+        h1 {
+            font-size: 4em;
+            color: #fff;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+            animation: fadeInMove 4s ease-in-out;
+        }
+
+        /* Animación de aparición del título */
+        @keyframes fadeInMove {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilo para los párrafos */
+        p {
+            font-size: 2em;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 15px;
+            margin: 15px 0;
+            animation: textFadeIn 3s ease-in-out;
+        }
+
+        /* Animación de entrada para los párrafos */
+        @keyframes textFadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Corazón animado */
+        span.heart {
+            color: red;
+            font-size: 3em;
+            animation: pulse 1.5s infinite;
+            display: inline-block;
+        }
+
+        /* Efecto de pulso para el corazón */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+
+        /* Firma personalizada */
+        .firma {
+            font-size: 1.5em;
+            margin-top: 30px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            animation: fadeIn 5s ease-in-out;
+        }
+
+        /* Estilo para "Juan Carlos" */
+        .firma .name {
+            font-size: 2em;
+            color: #ff6b6b;
+            animation: textZoomIn 6s ease-in-out infinite alternate;
+        }
+
+        /* Animación de aparición lenta */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Animación para agrandar y achicar el nombre */
+        @keyframes textZoomIn {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        /* Animación de estrellas flotantes */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .stars div {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: moveStar 10s linear infinite;
+        }
+
+        @keyframes moveStar {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+
+        /* Posicionando las estrellas al azar */
+        .stars div:nth-child(1) { left: 10%; animation-duration: 12s; }
+        .stars div:nth-child(2) { left: 30%; animation-duration: 8s; }
+        .stars div:nth-child(3) { left: 50%; animation-duration: 6s; }
+        .stars div:nth-child(4) { left: 70%; animation-duration: 10s; }
+        .stars div:nth-child(5) { left: 90%; animation-duration: 7s; }
+
+    </style>
+</head>
+<body>
+
+    <!-- Estrellas decorativas en el fondo -->
+    <div class="stars">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Mensaje principal -->
+    <h1>Eres mi chica ideal</h1>
+    <p>Mi niña bonita</p>
+    <p>Mi mayito <span class="heart">❤️</span></p>
+
+    <!-- Firma personalizada -->
+    <div class="firma">
+        Con todo mi amor,<br>
+        <span class="name">Juan Carlos</span>
+    </div>
+
+</body>
+</html>
